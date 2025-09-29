@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог курсов - EnglishMaster</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ВСТАВЬТЕ СТИЛИ ИЗ index.html (весь блок style) */
+        :root {
+            --primary: #2E86AB;
+            --secondary: #A23B72;
+            --accent: #F18F01;
+            --light: #F8F9FA;
+            --dark: #2B2D42;
+            --success: #4BB543;
+            --warning: #FFC107;
+            --danger: #DC3545;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* ... остальные стили из index.html ... */
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .breadcrumb a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        .breadcrumb span {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Course Detail Styles */
+        .course-detail {
+            padding: 3rem 0;
+        }
+        
+        .course-info {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .course-sidebar {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: fit-content;
+        }
+        
+        .course-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .course-features {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        
+        .course-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .course-features li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (такой же как в index.html) -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>EnglishMaster</span>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html" class="active">Каталог курсов</a></li>
+                        <li><a href="materials.html">Учебные материалы</a></li>
+                        <li><a href="practice.html">Практика</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Войти</a>
+                    <a href="register.html" class="btn btn-primary">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Каталог курсов</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Главная</a> / <span>Каталог курсов</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Content -->
+    <section class="catalog">
+        <div class="container">
+            <div class="catalog-filters">
+                <button class="filter-btn active">Все курсы</button>
+                <button class="filter-btn">Для начинающих</button>
+                <button class="filter-btn">Продвинутый уровень</button>
+                <button class="filter-btn">Интенсив</button>
+                <button class="filter-btn">Грамматика</button>
+                <button class="filter-btn">Аудирование</button>
+                <button class="filter-btn">Говорение</button>
+                <button class="filter-btn">Письмо</button>
+            </div>
+            
+            <div class="catalog-grid">
+                <div class="catalog-card">
+                    <div class="card-image" style="background: var(--primary);">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Полный курс подготовки</h3>
+                        <p>Комплексная подготовка ко всем разделам ЕГЭ: аудирование, чтение, грамматика, письмо, говорение</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 120 часов</span>
+                            <span><i class="fas fa-signal"></i> Все уровни</span>
+                        </div>
+                        <div class="card-meta">
+                            <span><i class="fas fa-users"></i> 15-20 человек</span>
+                            <span style="color: var(--primary); font-weight: bold;">12 900 ₽</span>
+                        </div>
+                        <a href="course-intensive.html" class="btn btn-primary" style="margin-top: 1rem; display: block;">Подробнее</a>
+                    </div>
+                </div>
+                
+                <div class="catalog-card">
+                    <div class="card-image" style="background: var(--secondary);">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Эссе и письмо</h3>
+                        <p>Научитесь писать эссе и письма в формате ЕГЭ на высокий балл. Разбор критериев оценивания.</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 24 часа</span>
+                            <span><i class="fas fa-signal"></i> Средний+</span>
+                        </div>
+                        <div class="card-meta">
+                            <span><i class="fas fa-users"></i> 10-15 человек</span>
+                            <span style="color: var(--primary); font-weight: bold;">4 900 ₽</span>
+                        </div>
+                        <a href="course-writing.html" class="btn btn-primary" style="margin-top: 1rem; display: block;">Подробнее</a>
+                    </div>
+                </div>
+                
+                <div class="catalog-card">
+                    <div class="card-image" style="background: #F18F01;">
+                        <i class="fas fa-assistive-listening-systems"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Аудирование</h3>
+                        <p>Тренировка восприятия английской речи на слух с разными акцентами и скоростью речи</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 18 часов</span>
+                            <span><i class="fas fa-signal"></i> Начинающий+</span>
+                        </div>
+                        <div class="card-meta">
+                            <span><i class="fas fa-users"></i> 12-18 человек</span>
+                            <span style="color: var(--primary); font-weight: bold;">3 900 ₽</span>
+                        </div>
+                        <a href="course-listening.html" class="btn btn-primary" style="margin-top: 1rem; display: block;">Подробнее</a>
+                    </div>
+                </div>
+                
+                <div class="catalog-card">
+                    <div class="card-image" style="background: #4BB543;">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Говорение</h3>
+                        <p>Подготовка к устной части ЕГЭ с тренировкой произношения, fluency и монологической речи</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 20 часов</span>
+                            <span><i class="fas fa-signal"></i> Средний</span>
+                        </div>
+                        <div class="card-meta">
+                            <span><i class="fas fa-users"></i> 8-12 человек</span>
+                            <span style="color: var(--primary); font-weight: bold;">4 500 ₽</span>
+                        </div>
+                        <a href="course-speaking.html" class="btn btn-primary" style="margin-top: 1rem; display: block;">Подробнее</a>
+                    </div>
+                </div>
+                
+                <div class="catalog-card">
+                    <div class="card-image" style="background: #DC3545;">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Грамматика</h3>
+                        <p>Систематизация знаний английской грамматики с упором на задания ЕГЭ</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 30 часов</span>
+                            <span><i class="fas fa-signal"></i> Все уровни</span>
+                        </div>
+                        <div class="card-meta">
+                            <span><i class="fas fa-users"></i> 15-20 человек</span>
+                            <span style="color: var(--primary); font-weight: bold;">5 900 ₽</span>
+                        </div>
+                        <a href="course-grammar.html" class="btn btn-primary" style="margin-top: 1rem; display: block;">Подробнее</a>
+                    </div>
+                </div>
+                
+                <div class="catalog-card">
+                    <div class="card-image" style="background: #6f42c1;">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Интенсив за 1 месяц</h3>
+                        <p>Экспресс-подготовка для тех, кому нужно быстро повторить весь материал перед экзаменом</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 40 часов</span>
+                            <span><i class="fas fa-signal"></i> Средний+</span>
+                        </div>
+                        <div class="card-meta">
+                            <span><i class="fas fa-users"></i> 10-15 человек</span>
+                            <span style="color: var(--primary); font-weight: bold;">8 900 ₽</span>
+                        </div>
+                        <a href="course-intensive.html" class="btn btn-primary" style="margin-top: 1rem; display: block;">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="features" style="padding: 5rem 0; background: #f8f9fa;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Частые вопросы</h2>
+                <p>Ответы на популярные вопросы о наших курсах</p>
+            </div>
+            
+            <div class="materials-grid">
+                <div class="material-card">
+                    <h3>📅 Как проходит обучение?</h3>
+                    <p>Обучение проходит онлайн в формате вебинаров с обратной связью от преподавателя. Все занятия записываются и доступны в личном кабинете.</p>
+                </div>
+                
+                <div class="material-card">
+                    <h3>⏰ Сколько времени занимает?</h3>
+                    <p>В среднем 3-5 часов в неделю. Вы можете совмещать подготовку с учебой в школе и другими занятиями.</p>
+                </div>
+                
+                <div class="material-card">
+                    <h3>👨‍🏫 Кто преподает?</h3>
+                    <p>Опытные преподаватели с педагогическим образованием и сертификатами CELTA, TKT, IELTS.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (такой же как в index.html) -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EnglishMaster</h3>
+                    <p>Платформа для структурированной подготовки к ЕГЭ по английскому языку.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Разделы</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог курсов</a></li>
+                        <li><a href="materials.html">Учебные материалы</a></li>
+                        <li><a href="practice.html">Практика</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Курсы</h3>
+                    <ul class="footer-links">
+                        <li><a href="course-intensive.html">Интенсивный курс</a></li>
+                        <li><a href="course-writing.html">Эссе и письмо</a></li>
+                        <li><a href="course-listening.html">Аудирование</a></li>
+                        <li><a href="course-speaking.html">Говорение</a></li>
+                        <li><a href="course-grammar.html">Грамматика</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> info@englishmaster.ru</li>
+                        <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Образцова, 25</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 EnglishMaster. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('main-nav').classList.toggle('active');
+        });
+        
+        // Filter buttons
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Здесь можно добавить фильтрацию курсов
+                const filter = this.textContent.toLowerCase();
+                console.log('Фильтр:', filter);
+            });
+        });
+    </script>
+</body>
+</html>
