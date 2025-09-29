@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аудирование - EnglishMaster</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ВСТАВЬТЕ СТИЛИ ИЗ course-intensive.html */
+        
+        .audio-player {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin: 2rem 0;
+        }
+        
+        .player-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .play-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        .progress-bar {
+            flex: 1;
+            height: 6px;
+            background: #e9ecef;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background: var(--primary);
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+        
+        .accent-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .accent-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>EnglishMaster</span>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог курсов</a></li>
+                        <li><a href="materials.html">Учебные материалы</a></li>
+                        <li><a href="practice.html">Практика</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Войти</a>
+                    <a href="register.html" class="btn btn-primary">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Course Hero -->
+    <section class="course-hero">
+        <div class="container">
+            <div class="breadcrumb" style="margin-bottom: 2rem;">
+                <a href="index.html" style="color: var(--accent);">Главная</a> / 
+                <a href="catalog.html" style="color: var(--accent);">Каталог</a> / 
+                <span style="color: white;">Аудирование</span>
+            </div>
+            
+            <div class="course-header">
+                <div>
+                    <h1 style="font-size: 3rem; margin-bottom: 1rem;">Курс аудирования для ЕГЭ</h1>
+                    <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem;">
+                        Научитесь понимать английскую речь на слух с разными акцентами и скоростью. 
+                        Освойте стратегии выполнения заданий по аудированию и повысьте свой балл.
+                    </p>
+                    
+                    <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="far fa-clock"></i>
+                            <span>18 академических часов</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-signal"></i>
+                            <span>Начинающий и выше</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-users"></i>
+                            <span>До 15 человек в группе</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="far fa-calendar"></i>
+                            <span>Старт 20 января</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-sidebar">
+                    <div class="course-price">3 900 ₽</div>
+                    <div style="color: #6c757d; margin-bottom: 1rem;">или 1 950 ₽/мес</div>
+                    
+                    <a href="register.html?course=listening" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">
+                        Записаться на курс
+                    </a>
+                    <a href="demo.html" class="btn btn-outline" style="width: 100%; color: var(--dark); border-color: #ddd;">
+                        Бесплатный пробный урок
+                    </a>
+                    
+                    <ul class="course-features">
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>50+ аудиозаписей</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Разные акценты</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Стратегии выполнения</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Транскрипты и переводы</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Сертификат о завершении</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Content -->
+    <section class="features" style="padding: 5rem 0;">
+        <div class="container">
+            <div class="course-header">
+                <!-- Main Content -->
+                <div>
+                    <!-- Demo Audio -->
+                    <div class="audio-player">
+                        <h3 style="color: var(--secondary); margin-bottom: 1rem;">Попробуйте демо-задание</h3>
+                        <p style="color: #6c757d; margin-bottom: 1rem;">
+                            Прослушайте аудиозапись и ответьте на вопросы (уровень: Intermediate)
+                        </p>
+                        
+                        <div class="player-controls">
+                            <button class="play-btn" id="playBtn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress" id="progress"></div>
+                            </div>
+                            <span id="time">0:00 / 2:30</span>
+                        </div>
+                        
+                        <div style="margin-top: 2rem;">
+                            <h4 style="margin-bottom: 1rem;">Вопросы:</h4>
+                            <div style="background: #f8f9fa; padding: 1rem; border-radius: 5px;">
+                                <p><strong>1. What is the main topic of the conversation?</strong></p>
+                                <div style="margin: 0.5rem 0;">
+                                    <input type="radio" id="q1a" name="q1">
+                                    <label for="q1a" style="margin-left: 0.5rem;">Weekend plans</label>
+                                </div>
+                                <div style="margin: 0.5rem 0;">
+                                    <input type="radio" id="q1b" name="q1">
+                                    <label for="q1b" style="margin-left: 0.5rem;">Work projects</label>
+                                </div>
+                                <div style="margin: 0.5rem 0;">
+                                    <input type="radio" id="q1c" name="q1">
+                                    <label for="q1c" style="margin-left: 0.5rem;">Travel arrangements</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About Course -->
+                    <div style="margin-bottom: 3rem;">
+                        <h2 style="color: var(--secondary); margin-bottom: 1.5rem;">О курсе</h2>
+                        <p style="margin-bottom: 1rem;">
+                            Аудирование - один из самых сложных разделов ЕГЭ по английскому языку. 
+                            На этом курсе вы научитесь понимать английскую речь в разных ситуациях и с разными акцентами.
+                        </p>
+                        <p style="margin-bottom: 1rem;">
+                            Мы работаем с аутентичными записями носителей языка, постепенно увеличивая сложность и скорость речи. 
+                            Вы освоите стратегии предвосхищения содержания и выделения ключевой информации.
+                        </p>
+                    </div>
+
+                    <!-- Accent Types -->
+                    <div style="margin-bottom: 3rem;">
+                        <h2 style="color: var(--secondary); margin-bottom: 1.5rem;">Акценты, которые мы изучаем</h2>
+                        <div class="accent-types">
+                            <div class="accent-card">
+                                <i class="fas fa-flag-usa" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                                <h4>Американский</h4>
+                                <p style="color: #6c757d; font-size: 0.9rem;">Стандартный американский английский</p>
+                            </div>
+                            <div class="accent-card">
+                                <i class="fas fa-flag-uk" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                                <h4>Британский</h4>
+                                <p style="color: #6c757d; font-size: 0.9rem;">Received Pronunciation</p>
+                            </div>
+                            <div class="accent-card">
+                                <i class="fas fa-globe-europe" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                                <h4>Австралийский</h4>
+                                <p style="color: #6c757d; font-size: 0.9rem;">Особенности произношения</p>
+                            </div>
+                            <div class="accent-card">
+                                <i class="fas fa-globe-americas" style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                                <h4>Канадский</h4>
+                                <p style="color: #6c757d; font-size: 0.9rem;">Смесь британского и американского</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Syllabus -->
+                    <div class="syllabus">
+                        <h2 style="color: var(--secondary); margin-bottom: 1.5rem;">Программа курса</h2>
+                        
+                        <div class="module active">
+                            <div class="module-header">
+                                <h3>Модуль 1: Основы аудирования (1 неделя)</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="module-content">
+                                <div class="lesson-item">
+                                    <i class="far fa-play-circle" style="color: var(--primary);"></i>
+                                    <div>
+                                        <div>Распознавание ключевых слов</div>
+                                        <div class="lesson-duration">2 занятия • 4 часа</div>
+                                    </div>
+                                </div>
+                                <div class="lesson-item">
+                                    <i class="far fa-play-circle" style="color: var(--primary);"></i>
+                                    <div>
+                                        <div>Понимание основного содержания</div>
+                                        <div class="lesson-duration">1 занятие • 2 часа</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="module">
+                            <div class="module-header">
+                                <h3>Модуль 2: Диалоги и интервью (2 недели)</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="module-content">
+                                <!-- Content would be here -->
+                            </div>
+                        </div>
+                        
+                        <!-- More modules... -->
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="course-sidebar">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Что вы получите:</h3>
+                    <ul class="course-features">
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Навык понимания быстрой речи</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Умение работать с разными акцентами</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Стратегии выполнения заданий</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Уверенность в разделе "Аудирование"</span>
+                        </li>
+                    </ul>
+                    
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                        <h4 style="margin-bottom: 1rem;">📊 Результаты студентов:</h4>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2rem; font-weight: bold; color: var(--primary);">+35%</div>
+                            <div style="color: #6c757d;">улучшение понимания на слух</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <!-- ВСТАВЬТЕ FOOTER ИЗ course-intensive.html -->
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('main-nav').classList.toggle('active');
+        });
+        
+        // Module accordion
+        const modules = document.querySelectorAll('.module');
+        modules.forEach(module => {
+            const header = module.querySelector('.module-header');
+            header.addEventListener('click', () => {
+                modules.forEach(m => {
+                    if (m !== module) {
+                        m.classList.remove('active');
+                    }
+                });
+                module.classList.toggle('active');
+            });
+        });
+        
+        // Audio player simulation
+        const playBtn = document.getElementById('playBtn');
+        const progress = document.getElementById('progress');
+        const timeDisplay = document.getElementById('time');
+        let isPlaying = false;
+        let progressValue = 0;
+        
+        playBtn.addEventListener('click', function() {
+            isPlaying = !isPlaying;
+            if (isPlaying) {
+                this.innerHTML = '<i class="fas fa-pause"></i>';
+                simulatePlayback();
+            } else {
+                this.innerHTML = '<i class="fas fa-play"></i>';
+            }
+        });
+        
+        function simulatePlayback() {
+            if (isPlaying && progressValue < 100) {
+                progressValue += 0.5;
+                progress.style.width = progressValue + '%';
+                
+                const currentTime = Math.floor(150 * (progressValue / 100));
+                const minutes = Math.floor(currentTime / 60);
+                const seconds = currentTime % 60;
+                timeDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')} / 2:30`;
+                
+                setTimeout(simulatePlayback, 100);
+            } else if (progressValue >= 100) {
+                isPlaying = false;
+                playBtn.innerHTML = '<i class="fas fa-play"></i>';
+                progressValue = 0;
+                progress.style.width = '0%';
+                timeDisplay.textContent = '0:00 / 2:30';
+            }
+        }
+    </script>
+</body>
+</html>
