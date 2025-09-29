@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика - EnglishMaster</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ВСТАВЬТЕ СТИЛИ ИЗ index.html */
+        
+        .practice-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .practice-card-large {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+        
+        .practice-card-large:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .practice-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .progress-bar {
+            background: #e9ecef;
+            border-radius: 10px;
+            height: 8px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+        
+        .progress {
+            background: var(--success);
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.3s ease;
+        }
+        
+        .timer {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin: 0.5rem 0;
+        }
+        
+        .difficulty {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+        
+        .difficulty-easy {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .difficulty-medium {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .difficulty-hard {
+            background: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>EnglishMaster</span>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог курсов</a></li>
+                        <li><a href="materials.html">Учебные материалы</a></li>
+                        <li><a href="practice.html" class="active">Практика</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Войти</a>
+                    <a href="register.html" class="btn btn-primary">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Практические задания</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Главная</a> / <span>Практика</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Categories -->
+    <section class="features" style="padding: 5rem 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Тренируйтесь на реальных заданиях</h2>
+                <p>Выберите раздел для практики и улучшите свои навыки</p>
+            </div>
+            
+            <div class="practice-categories">
+                <div class="practice-card-large">
+                    <div class="practice-icon">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <h3>Полный пробный тест</h3>
+                    <p>Полностью имитирует реальный экзамен ЕГЭ по английскому языку</p>
+                    <div class="timer">
+                        <i class="far fa-clock"></i> Время: 3 часа 15 минут
+                    </div>
+                    <div class="difficulty difficulty-hard">Высокая сложность</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 65%"></div>
+                    </div>
+                    <div style="font-size: 0.9rem; color: #6c757d;">
+                        65% студентов завершили
+                    </div>
+                    <a href="practice/tests.html" class="btn btn-primary" style="margin-top: 1.5rem; display: block;">
+                        Начать тест
+                    </a>
+                </div>
+                
+                <div class="practice-card-large">
+                    <div class="practice-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Устная часть</h3>
+                    <p>Тренировка говорения с системой распознавания речи и обратной связью</p>
+                    <div class="timer">
+                        <i class="far fa-clock"></i> Время: 15 минут
+                    </div>
+                    <div class="difficulty difficulty-medium">Средняя сложность</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 45%"></div>
+                    </div>
+                    <div style="font-size: 0.9rem; color: #6c757d;">
+                        45% студентов завершили
+                    </div>
+                    <a href="practice/speaking.html" class="btn btn-primary" style="margin-top: 1.5rem; display: block;">
+                        Начать тренировку
+                    </a>
+                </div>
+                
+                <div class="practice-card-large">
+                    <div class="practice-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3>Письменная часть</h3>
+                    <p>Написание эссе и писем с проверкой преподавателем</p>
+                    <div class="timer">
+                        <i class="far fa-clock"></i> Время: 1 час 30 минут
+                    </div>
+                    <div class="difficulty difficulty-medium">Средняя сложность</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 52%"></div>
+                    </div>
+                    <div style="font-size: 0.9rem; color: #6c757d;">
+                        52% студентов завершили
+                    </div>
+                    <a href="practice/writing.html" class="btn btn-primary" style="margin-top: 1.5rem; display: block;">
+                        Начать практику
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Practice -->
+    <section class="catalog" style="padding: 5rem 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Практика по разделам</h2>
+                <p>Тренируйтесь отдельно по каждому разделу ЕГЭ</p>
+            </div>
+            
+            <div class="catalog-grid">
+                <div class="catalog-card">
+                    <div class="card-image" style="background: var(--primary);">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Аудирование</h3>
+                        <p>30 заданий на понимание английской речи на слух</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 40 минут</span>
+                            <span class="difficulty difficulty-medium">Средняя</span>
+                        </div>
+                        <a href="practice/listening.html" class="btn btn-primary" style="margin-top: 1rem; display: block;">
+                            Начать практику
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="catalog-card">
+                    <div class="card-image" style="background: var(--secondary);">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Чтение</h3>
+                        <p>Тексты и задания на понимание прочитанного</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 45 минут</span>
+                            <span class="difficulty difficulty-easy">Легкая</span>
+                        </div>
+                        <a href="practice/reading.html" class="btn btn-primary" style="margin-top: 1rem; display: block;">
+                            Начать практику
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="catalog-card">
+                    <div class="card-image" style="background: #F18F01;">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Грамматика</h3>
+                        <p>Задания на времена, артикли, предлоги и др.</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 30 минут</span>
+                            <span class="difficulty difficulty-medium">Средняя</span>
+                        </div>
+                        <a href="practice/grammar.html" class="btn btn-primary" style="margin-top: 1rem; display: block;">
+                            Начать практику
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="catalog-card">
+                    <div class="card-image" style="background: #4BB543;">
+                        <i class="fas fa-spell-check"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Лексика</h3>
+                        <p>Словообразование, фразовые глаголы, идиомы</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 25 минут</span>
+                            <span class="difficulty difficulty-hard">Сложная</span>
+                        </div>
+                        <a href="practice/vocabulary.html" class="btn btn-primary" style="margin-top: 1rem; display: block;">
+                            Начать практику
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ваша статистика</h2>
+                <p>Отслеживайте свой прогресс в подготовке</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>87%</h3>
+                    <p>Средний результат</p>
+                </div>
+                
+                <div class="stat-item">
+                    <h3>42</h3>
+                    <p>Пройдено тестов</p>
+                </div>
+                
+                <div class="stat-item">
+                    <h3>15ч</h3>
+                    <p>Время практики</p>
+                </div>
+                
+                <div class="stat-item">
+                    <h3>24</h3>
+                    <p>Дней подряд</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="progress.html" class="btn btn-outline" style="background: rgba(255,255,255,0.1);">
+                    Подробная статистика
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EnglishMaster</h3>
+                    <p>Платформа для структурированной подготовки к ЕГЭ по английскому языку.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Разделы</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог курсов</a></li>
+                        <li><a href="materials.html">Учебные материалы</a></li>
+                        <li><a href="practice.html">Практика</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Практика</h3>
+                    <ul class="footer-links">
+                        <li><a href="practice/tests.html">Пробные тесты</a></li>
+                        <li><a href="practice/speaking.html">Устная часть</a></li>
+                        <li><a href="practice/writing.html">Письменная часть</a></li>
+                        <li><a href="practice/listening.html">Аудирование</a></li>
+                        <li><a href="practice/grammar.html">Грамматика</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> info@englishmaster.ru</li>
+                        <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Образцова, 25</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 EnglishMaster. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('main-nav').classList.toggle('active');
+        });
+        
+        // Progress animation
+        const progressBars = document.querySelectorAll('.progress');
+        progressBars.forEach(bar => {
+            const width = bar.style.width;
+            bar.style.width = '0';
+            setTimeout(() => {
+                bar.style.width = width;
+            }, 500);
+        });
+    </script>
+</body>
+</html>
