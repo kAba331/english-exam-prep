@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эссе и письмо - EnglishMaster</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ВСТАВЬТЕ СТИЛИ ИЗ course-intensive.html */
+        
+        .writing-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .example-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .example-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .score-badge {
+            background: var(--success);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>EnglishMaster</span>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог курсов</a></li>
+                        <li><a href="materials.html">Учебные материалы</a></li>
+                        <li><a href="practice.html">Практика</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Войти</a>
+                    <a href="register.html" class="btn btn-primary">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Course Hero -->
+    <section class="course-hero">
+        <div class="container">
+            <div class="breadcrumb" style="margin-bottom: 2rem;">
+                <a href="index.html" style="color: var(--accent);">Главная</a> / 
+                <a href="catalog.html" style="color: var(--accent);">Каталог</a> / 
+                <span style="color: white;">Эссе и письмо</span>
+            </div>
+            
+            <div class="course-header">
+                <div>
+                    <h1 style="font-size: 3rem; margin-bottom: 1rem;">Курс "Эссе и письмо" для ЕГЭ</h1>
+                    <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem;">
+                        Научитесь писать эссе и письма на высокий балл. Разберите критерии оценивания и получите персональную обратную связь по каждой работе.
+                    </p>
+                    
+                    <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="far fa-clock"></i>
+                            <span>24 академических часа</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-signal"></i>
+                            <span>Все уровни</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-users"></i>
+                            <span>До 12 человек в группе</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="far fa-calendar"></i>
+                            <span>Старт каждую неделю</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-sidebar">
+                    <div class="course-price">4 900 ₽</div>
+                    <div style="color: #6c757d; margin-bottom: 1rem;">или 2 450 ₽/мес</div>
+                    
+                    <a href="register.html?course=writing" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">
+                        Записаться на курс
+                    </a>
+                    <a href="demo.html" class="btn btn-outline" style="width: 100%; color: var(--dark); border-color: #ddd;">
+                        Бесплатное пробное занятие
+                    </a>
+                    
+                    <ul class="course-features">
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>8 практических работ</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Персональная проверка</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Шаблоны и клише</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Разбор критериев</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Сертификат о завершении</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Content -->
+    <section class="features" style="padding: 5rem 0;">
+        <div class="container">
+            <div class="course-header">
+                <!-- Main Content -->
+                <div>
+                    <!-- About Course -->
+                    <div style="margin-bottom: 3rem;">
+                        <h2 style="color: var(--secondary); margin-bottom: 1.5rem;">О курсе</h2>
+                        <p style="margin-bottom: 1rem;">
+                            Письменная часть ЕГЭ по английскому языку - один из самых сложных разделов для многих студентов. 
+                            Этот курс поможет вам освоить навыки написания эссе и личных писем в соответствии с требованиями экзамена.
+                        </p>
+                        <p style="margin-bottom: 1rem;">
+                            Мы разберем структуру эссе, научимся использовать сложные грамматические конструкции и лексику, 
+                            а также освоим стратегии аргументации и связности текста.
+                        </p>
+                    </div>
+
+                    <!-- Writing Examples -->
+                    <div style="margin-bottom: 3rem;">
+                        <h2 style="color: var(--secondary); margin-bottom: 1.5rem;">Примеры работ наших студентов</h2>
+                        <div class="writing-examples">
+                            <div class="example-card">
+                                <div class="score-badge">14/14 баллов</div>
+                                <h4>Эссе "Технологии в образовании"</h4>
+                                <p style="color: #6c757d; margin: 0.5rem 0;">
+                                    Отличная структура, богатая лексика, убедительные аргументы
+                                </p>
+                                <a href="#" style="color: var(--primary); text-decoration: none; font-size: 0.9rem;">
+                                    Посмотреть работу →
+                                </a>
+                            </div>
+                            
+                            <div class="example-card">
+                                <div class="score-badge">13/14 баллов</div>
+                                <h4>Личное письмо другу</h4>
+                                <p style="color: #6c757d; margin: 0.5rem 0;">
+                                    Естественный стиль, правильный формат, хорошая лексика
+                                </p>
+                                <a href="#" style="color: var(--primary); text-decoration: none; font-size: 0.9rem;">
+                                    Посмотреть работу →
+                                </a>
+                            </div>
+                            
+                            <div class="example-card">
+                                <div class="score-badge">14/14 баллов</div>
+                                <h4>Эссе "Глобализация"</h4>
+                                <p style="color: #6c757d; margin: 0.5rem 0;">
+                                    Идеальная структура, сложные конструкции, отличная аргументация
+                                </p>
+                                <a href="#" style="color: var(--primary); text-decoration: none; font-size: 0.9rem;">
+                                    Посмотреть работу →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Syllabus -->
+                    <div class="syllabus">
+                        <h2 style="color: var(--secondary); margin-bottom: 1.5rem;">Программа курса</h2>
+                        
+                        <div class="module active">
+                            <div class="module-header">
+                                <h3>Неделя 1: Основы письменной речи</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="module-content">
+                                <div class="lesson-item">
+                                    <i class="far fa-play-circle" style="color: var(--primary);"></i>
+                                    <div>
+                                        <div>Структура эссе: введение, основная часть, заключение</div>
+                                        <div class="lesson-duration">2 занятия • 4 часа</div>
+                                    </div>
+                                </div>
+                                <div class="lesson-item">
+                                    <i class="far fa-play-circle" style="color: var(--primary);"></i>
+                                    <div>
+                                        <div>Формат личного письма</div>
+                                        <div class="lesson-duration">1 занятие • 2 часа</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="module">
+                            <div class="module-header">
+                                <h3>Неделя 2: Лексика для письма</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="module-content">
+                                <!-- Content would be here -->
+                            </div>
+                        </div>
+                        
+                        <!-- More modules... -->
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="course-sidebar">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Результаты после курса:</h3>
+                    <ul class="course-features">
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Навык написания эссе за 40 минут</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Уверенность в критериях оценивания</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Богатый словарный запас для письма</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Умение строить сложные предложения</span>
+                        </li>
+                    </ul>
+                    
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                        <h4 style="margin-bottom: 1rem;">🎯 Средний результат:</h4>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2rem; font-weight: bold; color: var(--primary);">13.2/14</div>
+                            <div style="color: #6c757d;">баллов за письменную часть</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <!-- ВСТАВЬТЕ FOOTER ИЗ course-intensive.html -->
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('main-nav').classList.toggle('active');
+        });
+        
+        // Module accordion
+        const modules = document.querySelectorAll('.module');
+        modules.forEach(module => {
+            const header = module.querySelector('.module-header');
+            header.addEventListener('click', () => {
+                modules.forEach(m => {
+                    if (m !== module) {
+                        m.classList.remove('active');
+                    }
+                });
+                module.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
