@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебные материалы - EnglishMaster</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ВСТАВЬТЕ СТИЛИ ИЗ index.html */
+        
+        .materials-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary);
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .download-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (такой же как в index.html) -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>EnglishMaster</span>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог курсов</a></li>
+                        <li><a href="materials.html" class="active">Учебные материалы</a></li>
+                        <li><a href="practice.html">Практика</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Войти</a>
+                    <a href="register.html" class="btn btn-primary">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Учебные материалы</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Главная</a> / <span>Учебные материалы</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Categories -->
+    <section class="materials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Бесплатные материалы для подготовки</h2>
+                <p>Скачивайте PDF, проходите интерактивные тесты и улучшайте свой английский</p>
+            </div>
+            
+            <div class="materials-categories">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Грамматика</h3>
+                    <p>Полный справочник по английской грамматике с упражнениями и тестами</p>
+                    <div class="material-links">
+                        <a href="materials/grammar-rules.pdf" class="material-link">
+                            <i class="fas fa-download"></i> Полный справочник (PDF, 2.1 MB)
+                        </a>
+                        <a href="materials/grammar-exercises.pdf" class="material-link">
+                            <i class="fas fa-download"></i> Сборник упражнений (PDF, 1.8 MB)
+                        </a>
+                        <a href="materials/grammar-tests.html" class="material-link">
+                            <i class="fas fa-play-circle"></i> Интерактивные тесты
+                        </a>
+                    </div>
+                    <div class="download-stats">
+                        <span>📥 1,245 скачиваний</span>
+                        <span>⭐ 4.8/5</span>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <h3>Аудирование</h3>
+                    <p>Аудиозаписи и задания для тренировки восприятия английской речи на слух</p>
+                    <div class="material-links">
+                        <a href="materials/listening-beginner.html" class="material-link">
+                            <i class="fas fa-play-circle"></i> Начальный уровень (15 заданий)
+                        </a>
+                        <a href="materials/listening-intermediate.html" class="material-link">
+                            <i class="fas fa-play-circle"></i> Средний уровень (20 заданий)
+                        </a>
+                        <a href="materials/listening-advanced.html" class="material-link">
+                            <i class="fas fa-play-circle"></i> Продвинутый уровень (25 заданий)
+                        </a>
+                    </div>
+                    <div class="download-stats">
+                        <span>📥 892 скачивания</span>
+                        <span>⭐ 4.7/5</span>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Лексика</h3>
+                    <p>Тематические словари, фразовые глаголы и идиомы для ЕГЭ</p>
+                    <div class="material-links">
+                        <a href="materials/vocabulary-themes.pdf" class="material-link">
+                            <i class="fas fa-download"></i> Тематическая лексика (PDF, 1.5 MB)
+                        </a>
+                        <a href="materials/vocabulary-games.html" class="material-link">
+                            <i class="fas fa-gamepad"></i> Лексические игры
+                        </a>
+                        <a href="materials/vocabulary-tests.html" class="material-link">
+                            <i class="fas fa-play-circle"></i> Тесты на лексику
+                        </a>
+                    </div>
+                    <div class="download-stats">
+                        <span>📥 1,078 скачиваний</span>
+                        <span>⭐ 4.9/5</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Materials -->
+            <div class="materials-grid">
+                <div class="material-card">
+                    <div class="material-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3>Письмо и эссе</h3>
+                    <p>Шаблоны эссе, полезные фразы и критерии оценивания письменной части</p>
+                    <div class="material-links">
+                        <a href="materials/essay-templates.pdf" class="material-link">
+                            <i class="fas fa-download"></i> Шаблоны эссе (PDF)
+                        </a>
+                        <a href="materials/useful-phrases.pdf" class="material-link">
+                            <i class="fas fa-download"></i> Полезные фразы (PDF)
+                        </a>
+                        <a href="materials/writing-practice.html" class="material-link">
+                            <i class="fas fa-play-circle"></i> Практика письма
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="material-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Говорение</h3>
+                    <p>Темы для монологов, диалогов и критерии оценивания устной части</p>
+                    <div class="material-links">
+                        <a href="materials/speaking-topics.pdf" class="material-link">
+                            <i class="fas fa-download"></i> Темы для говорения (PDF)
+                        </a>
+                        <a href="materials/pronunciation-guide.pdf" class="material-link">
+                            <i class="fas fa-download"></i> Произношение (PDF)
+                        </a>
+                        <a href="materials/speaking-practice.html" class="material-link">
+                            <i class="fas fa-play-circle"></i> Практика говорения
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="material-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Пробные тесты</h3>
+                    <p>Полные варианты ЕГЭ прошлых лет с ответами и решениями</p>
+                    <div class="material-links">
+                        <a href="materials/test-2023.pdf" class="material-link">
+                            <i class="fas fa-download"></i> ЕГЭ 2023 (PDF)
+                        </a>
+                        <a href="materials/test-2022.pdf" class="material-link">
+                            <i class="fas fa-download"></i> ЕГЭ 2022 (PDF)
+                        </a>
+                        <a href="materials/test-2021.pdf" class="material-link">
+                            <i class="fas fa-download"></i> ЕГЭ 2021 (PDF)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (такой же как в index.html) -->
+    <footer>
+        <!-- ВСТАВЬТЕ FOOTER ИЗ index.html -->
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('main-nav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
