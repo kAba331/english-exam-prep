@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы - EnglishMaster</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ВСТАВЬТЕ СТИЛИ ИЗ index.html */
+        
+        .reviews-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .review-item {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--primary);
+        }
+        
+        .review-meta {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .reviewer-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .review-result {
+            background: var(--success);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        .add-review {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-top: 3rem;
+        }
+        
+        .rating-stars {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .star {
+            font-size: 1.5rem;
+            color: #ddd;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .star:hover,
+        .star.active {
+            color: var(--warning);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>EnglishMaster</span>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог курсов</a></li>
+                        <li><a href="materials.html">Учебные материалы</a></li>
+                        <li><a href="practice.html">Практика</a></li>
+                        <li><a href="reviews.html" class="active">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Войти</a>
+                    <a href="register.html" class="btn btn-primary">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Отзывы наших учеников</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Главная</a> / <span>Отзывы</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Content -->
+    <section class="features" style="padding: 5rem 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Что говорят наши ученики</h2>
+                <p>Более 2500 студентов уже подготовились к ЕГЭ с EnglishMaster</p>
+            </div>
+            
+            <div class="reviews-container">
+                <div class="review-item">
+                    <div class="review-meta">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">АК</div>
+                            <div>
+                                <h4>Анна К.</h4>
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-result">95 баллов</div>
+                    </div>
+                    <p>"Занималась на платформе 4 месяца перед экзаменом. Структурированные материалы и постоянная практика помогли мне сдать ЕГЭ на 95 баллов! Особенно полезными были задания на аудирование и практика написания эссе. Преподаватели всегда были на связи и помогали разобраться со сложными темами."</p>
+                    <div style="margin-top: 1rem; color: #6c757d; font-size: 0.9rem;">
+                        Курс: Полная подготовка • Июнь 2023
+                    </div>
+                </div>
+                
+                <div class="review-item">
+                    <div class="review-meta">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">МС</div>
+                            <div>
+                                <h4>Максим С.</h4>
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-result">88 баллов</div>
+                    </div>
+                    <p>"Курс по написанию эссе просто спас меня! Раньше я не мог написать связный текст больше 150 слов, а после обучения легко справляюсь с эссе на 250+ слов. Система проверки работ очень удобная - преподаватель подробно разбирает каждую ошибку. Сдал на 88 баллов, хотя до курса едва набирал 60."</p>
+                    <div style="margin-top: 1rem; color: #6c757d; font-size: 0.9rem;">
+                        Курс: Эссе и письмо • Май 2023
+                    </div>
+                </div>
+                
+                <div class="review-item">
+                    <div class="review-meta">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">ЕЛ</div>
+                            <div>
+                                <h4>Екатерина Л.</h4>
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-result">91 балл</div>
+                    </div>
+                    <p>"Платформа помогла мне систематизировать знания. Очень понравилась возможность заниматься в любое время и отслеживать свой прогресс. Особенно хочу отметить качество материалов по грамматике - все правила объяснены очень доступно с большим количеством примеров. Спасибо за качественную подготовку!"</p>
+                    <div style="margin-top: 1rem; color: #6c757d; font-size: 0.9rem;">
+                        Курс: Интенсивный • Апрель 2023
+                    </div>
+                </div>
+                
+                <div class="review-item">
+                    <div class="review-meta">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">ДИ</div>
+                            <div>
+                                <h4>Дмитрий И.</h4>
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-result">94 балла</div>
+                    </div>
+                    <p>"Прошел интенсивный курс за 2 месяца. Не ожидал такого результата! Материалы подобраны идеально - ничего лишнего, только то, что действительно нужно для ЕГЭ. Практические задания максимально приближены к реальному экзамену. Рекомендую всем, кто хочет сдать английский на высокий балл!"</p>
+                    <div style="margin-top: 1rem; color: #6c757d; font-size: 0.9rem;">
+                        Курс: Интенсив • Июль 2023
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add Review Form -->
+            <div class="add-review">
+                <h3 style="text-align: center; margin-bottom: 2rem;">Оставьте свой отзыв</h3>
+                <form id="reviewForm">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                        <input type="text" placeholder="Ваше имя" required style="padding: 1rem; border: 1px solid #ddd; border-radius: 5px;">
+                        <input type="email" placeholder="Ваш email" required style="padding: 1rem; border: 1px solid #ddd; border-radius: 5px;">
+                    </div>
+                    
+                    <div style="margin-bottom: 1rem;">
+                        <label>Ваша оценка:</label>
+                        <div class="rating-stars">
+                            <span class="star" data-rating="1">★</span>
+                            <span class="star" data-rating="2">★</span>
+                            <span class="star" data-rating="3">★</span>
+                            <span class="star" data-rating="4">★</span>
+                            <span class="star" data-rating="5">★</span>
+                        </div>
+                    </div>
+                    
+                    <textarea placeholder="Ваш отзыв..." required rows="5" style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 1rem;"></textarea>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        Отправить отзыв
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EnglishMaster</h3>
+                    <p>Платформа для структурированной подготовки к ЕГЭ по английскому языку.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Разделы</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог курсов</a></li>
+                        <li><a href="materials.html">Учебные материалы</a></li>
+                        <li><a href="practice.html">Практика</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Курсы</h3>
+                    <ul class="footer-links">
+                        <li><a href="course-intensive.html">Интенсивный курс</a></li>
+                        <li><a href="course-writing.html">Эссе и письмо</a></li>
+                        <li><a href="course-listening.html">Аудирование</a></li>
+                        <li><a href="course-speaking.html">Говорение</a></li>
+                        <li><a href="course-grammar.html">Грамматика</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> info@englishmaster.ru</li>
+                        <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Образцова, 25</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 EnglishMaster. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('main-nav').classList.toggle('active');
+        });
+        
+        // Star rating
+        const stars = document.querySelectorAll('.star');
+        let currentRating = 0;
+        
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = parseInt(this.getAttribute('data-rating'));
+                currentRating = rating;
+                
+                stars.forEach(s => {
+                    if (parseInt(s.getAttribute('data-rating')) <= rating) {
+                        s.classList.add('active');
+                    } else {
+                        s.classList.remove('active');
+                    }
+                });
+            });
+        });
+        
+        // Review form
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (currentRating === 0) {
+                alert('Пожалуйста, поставьте оценку');
+                return;
+            }
+            alert('Спасибо за ваш отзыв! Он будет опубликован после проверки.');
+            this.reset();
+            stars.forEach(star => star.classList.remove('active'));
+            currentRating = 0;
+        });
+    </script>
+</body>
+</html>
