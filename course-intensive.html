@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интенсивный курс ЕГЭ - EnglishMaster</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ВСТАВЬТЕ СТИЛИ ИЗ index.html */
+        
+        .course-hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .course-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        
+        .course-sidebar {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 100px;
+        }
+        
+        .course-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .course-features {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        
+        .course-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .course-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .syllabus {
+            margin: 3rem 0;
+        }
+        
+        .module {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .module:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .module-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .module-content {
+            margin-top: 1rem;
+            display: none;
+        }
+        
+        .module.active .module-content {
+            display: block;
+        }
+        
+        .lesson-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        
+        .lesson-item:hover {
+            background: #f8f9fa;
+        }
+        
+        .lesson-duration {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        .instructor-card {
+            display: flex;
+            gap: 2rem;
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin: 2rem 0;
+        }
+        
+        .instructor-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>EnglishMaster</span>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог курсов</a></li>
+                        <li><a href="materials.html">Учебные материалы</a></li>
+                        <li><a href="practice.html">Практика</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Войти</a>
+                    <a href="register.html" class="btn btn-primary">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Course Hero -->
+    <section class="course-hero">
+        <div class="container">
+            <div class="breadcrumb" style="margin-bottom: 2rem;">
+                <a href="index.html" style="color: var(--accent);">Главная</a> / 
+                <a href="catalog.html" style="color: var(--accent);">Каталог</a> / 
+                <span style="color: white;">Интенсивный курс</span>
+            </div>
+            
+            <div class="course-header">
+                <div>
+                    <h1 style="font-size: 3rem; margin-bottom: 1rem;">Интенсивный курс подготовки к ЕГЭ</h1>
+                    <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem;">
+                        Полная подготовка за 3 месяца с упором на самые сложные темы экзамена. 
+                        Идеально для тех, кто хочет систематизировать знания и сдать на 80+ баллов.
+                    </p>
+                    
+                    <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="far fa-clock"></i>
+                            <span>72 академических часа</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-signal"></i>
+                            <span>Средний уровень и выше</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-users"></i>
+                            <span>До 15 человек в группе</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="far fa-calendar"></i>
+                            <span>Старт 15 января</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-sidebar">
+                    <div class="course-price">12 900 ₽</div>
+                    <div style="color: #6c757d; margin-bottom: 1rem;">или 4 300 ₽/мес</div>
+                    
+                    <a href="register.html?course=intensive" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">
+                        Записаться на курс
+                    </a>
+                    <a href="demo.html" class="btn btn-outline" style="width: 100%; color: var(--dark); border-color: #ddd;">
+                        Бесплатный пробный урок
+                    </a>
+                    
+                    <ul class="course-features">
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>72 часа занятий</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>12 пробных тестов</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Проверка домашних заданий</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Доступ к материалам 24/7</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Сертификат о завершении</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Content -->
+    <section class="features" style="padding: 5rem 0;">
+        <div class="container">
+            <div class="course-header">
+                <!-- Main Content -->
+                <div>
+                    <!-- About Course -->
+                    <div style="margin-bottom: 3rem;">
+                        <h2 style="color: var(--secondary); margin-bottom: 1.5rem;">О курсе</h2>
+                        <p style="margin-bottom: 1rem;">
+                            Этот интенсивный курс разработан специально для эффективной подготовки к ЕГЭ по английскому языку. 
+                            Мы охватываем все аспекты экзамена: аудирование, чтение, грамматику, письмо и говорение.
+                        </p>
+                        <p style="margin-bottom: 1rem;">
+                            Курс построен по принципу "от простого к сложному" и включает в себя как теоретический материал, 
+                            так и много практических заданий, максимально приближенных к реальному экзамену.
+                        </p>
+                    </div>
+
+                    <!-- Syllabus -->
+                    <div class="syllabus">
+                        <h2 style="color: var(--secondary); margin-bottom: 1.5rem;">Программа курса</h2>
+                        
+                        <div class="module active">
+                            <div class="module-header">
+                                <h3>Модуль 1: Базовая грамматика (2 недели)</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="module-content">
+                                <div class="lesson-item">
+                                    <i class="far fa-play-circle" style="color: var(--primary);"></i>
+                                    <div>
+                                        <div>Времена английского глагола</div>
+                                        <div class="lesson-duration">4 занятия • 8 часов</div>
+                                    </div>
+                                </div>
+                                <div class="lesson-item">
+                                    <i class="far fa-play-circle" style="color: var(--primary);"></i>
+                                    <div>
+                                        <div>Артикли и предлоги</div>
+                                        <div class="lesson-duration">3 занятия • 6 часов</div>
+                                    </div>
+                                </div>
+                                <div class="lesson-item">
+                                    <i class="far fa-play-circle" style="color: var(--primary);"></i>
+                                    <div>
+                                        <div>Условные предложения</div>
+                                        <div class="lesson-duration">2 занятия • 4 часа</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="module">
+                            <div class="module-header">
+                                <h3>Модуль 2: Аудирование и чтение (3 недели)</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="module-content">
+                                <!-- Content would be here -->
+                            </div>
+                        </div>
+                        
+                        <div class="module">
+                            <div class="module-header">
+                                <h3>Модуль 3: Письменная часть (2 недели)</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="module-content">
+                                <!-- Content would be here -->
+                            </div>
+                        </div>
+                        
+                        <div class="module">
+                            <div class="module-header">
+                                <h3>Модуль 4: Устная часть (2 недели)</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="module-content">
+                                <!-- Content would be here -->
+                            </div>
+                        </div>
+                        
+                        <div class="module">
+                            <div class="module-header">
+                                <h3>Модуль 5: Пробные тесты (3 недели)</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="module-content">
+                                <!-- Content would be here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Instructor -->
+                    <div class="instructor-card">
+                        <div class="instructor-avatar">АС</div>
+                        <div>
+                            <h3 style="color: var(--secondary); margin-bottom: 0.5rem;">Анна Сергеева</h3>
+                            <div class="rating">
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span style="color: #6c757d;">4.9/5 (247 отзывов)</span>
+                            </div>
+                            <p style="margin: 1rem 0;">
+                                Опытный преподаватель английского языка с 10-летним стажем. Специализируется на подготовке к ЕГЭ и международным экзаменам. 
+                                Выпускница МГУ, сертификаты CELTA и TKT.
+                            </p>
+                            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <span style="background: #e9ecef; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.9rem;">
+                                    🎓 10+ лет опыта
+                                </span>
+                                <span style="background: #e9ecef; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.9rem;">
+                                    📚 500+ студентов
+                                </span>
+                                <span style="background: #e9ecef; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.9rem;">
+                                    ⭐ 94% успешной сдачи
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="course-sidebar">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Этот курс подойдет вам, если:</h3>
+                    <ul class="course-features">
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Уровень Pre-Intermediate и выше</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Осталось 3-6 месяцев до экзамена</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Нужна систематизация знаний</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Цель - 80+ баллов</span>
+                        </li>
+                    </ul>
+                    
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                        <h4 style="margin-bottom: 1rem;">📅 Ближайшие группы:</h4>
+                        <div style="margin-bottom: 1rem;">
+                            <div style="font-weight: 600;">15 января - 15 апреля</div>
+                            <div style="color: #6c757d; font-size: 0.9rem;">Пн/Ср/Пт, 18:00-20:00</div>
+                            <div style="color: var(--danger); font-size: 0.9rem;">Осталось 3 места</div>
+                        </div>
+                        <div>
+                            <div style="font-weight: 600;">1 февраля - 1 мая</div>
+                            <div style="color: #6c757d; font-size: 0.9rem;">Вт/Чт, 19:00-21:00</div>
+                            <div style="color: var(--success); font-size: 0.9rem;">Есть места</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="practice" style="padding: 4rem 0;">
+        <div class="container">
+            <div style="text-align: center; color: white;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Готовы начать подготовку?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">
+                    Присоединяйтесь к 2500+ студентов, которые уже успешно сдали ЕГЭ с нами
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="register.html?course=intensive" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                        Записаться на курс
+                    </a>
+                    <a href="contacts.html" class="btn btn-outline" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                        Задать вопрос
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EnglishMaster</h3>
+                    <p>Платформа для структурированной подготовки к ЕГЭ по английскому языку.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Разделы</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог курсов</a></li>
+                        <li><a href="materials.html">Учебные материалы</a></li>
+                        <li><a href="practice.html">Практика</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Курсы</h3>
+                    <ul class="footer-links">
+                        <li><a href="course-intensive.html">Интенсивный курс</a></li>
+                        <li><a href="course-writing.html">Эссе и письмо</a></li>
+                        <li><a href="course-listening.html">Аудирование</a></li>
+                        <li><a href="course-speaking.html">Говорение</a></li>
+                        <li><a href="course-grammar.html">Грамматика</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> info@englishmaster.ru</li>
+                        <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Образцова, 25</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 EnglishMaster. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('main-nav').classList.toggle('active');
+        });
+        
+        // Module accordion
+        const modules = document.querySelectorAll('.module');
+        modules.forEach(module => {
+            const header = module.querySelector('.module-header');
+            header.addEventListener('click', () => {
+                modules.forEach(m => {
+                    if (m !== module) {
+                        m.classList.remove('active');
+                    }
+                });
+                module.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
