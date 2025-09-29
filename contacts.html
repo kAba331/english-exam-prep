@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - EnglishMaster</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ВСТАВЬТЕ СТИЛИ ИЗ index.html */
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .contact-info {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background: #f8f9fa;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .contact-form {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-top: 3rem;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .faq-answer {
+            margin-top: 1rem;
+            color: #6c757d;
+            display: none;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>EnglishMaster</span>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог курсов</a></li>
+                        <li><a href="materials.html">Учебные материалы</a></li>
+                        <li><a href="practice.html">Практика</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html" class="active">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Войти</a>
+                    <a href="register.html" class="btn btn-primary">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Контакты</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Главная</a> / <span>Контакты</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="features" style="padding: 5rem 0;">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2 style="margin-bottom: 2rem; color: var(--secondary);">Свяжитесь с нами</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Адрес</h4>
+                            <p>Москва, ул. Образцова, 25<br>БЦ "Образование", офис 304</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Телефон</h4>
+                            <p>+7 (999) 123-45-67<br>+7 (495) 123-45-67</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@englishmaster.ru<br>support@englishmaster.ru</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Время работы</h4>
+                            <p>Пн-Пт: 9:00 - 21:00<br>Сб-Вс: 10:00 - 18:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links" style="margin-top: 2rem; justify-content: flex-start;">
+                        <a href="#" style="background: var(--primary);">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                        <a href="#" style="background: var(--primary);">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" style="background: var(--primary);">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" style="background: var(--primary);">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2 style="margin-bottom: 2rem; color: var(--secondary);">Напишите нам</h2>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Ваше имя *</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Тема сообщения</label>
+                            <select id="subject" class="form-control">
+                                <option value="">Выберите тему</option>
+                                <option value="course">Вопрос о курсах</option>
+                                <option value="materials">Учебные материалы</option>
+                                <option value="technical">Техническая поддержка</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Сообщение *</label>
+                            <textarea id="message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Отправить сообщение
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Map -->
+            <div class="map-container">
+                <div style="background: #f8f9fa; padding: 2rem; text-align: center; border-bottom: 1px solid #eee;">
+                    <h3 style="color: var(--secondary); margin-bottom: 0.5rem;">Как нас найти</h3>
+                    <p style="color: #6c757d;">Москва, ул. Образцова, 25 (м. Менделеевская)</p>
+                </div>
+                <div style="height: 400px; background: linear-gradient(45deg, #e9ecef, #f8f9fa); display: flex; align-items: center; justify-content: center; color: #6c757d;">
+                    <div style="text-align: center;">
+                        <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-bottom: 1rem; color: var(--primary);"></i>
+                        <p>Здесь будет карта</p>
+                        <p style="font-size: 0.9rem;">Карта подключится после размещения сайта на хостинге</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div style="margin-top: 5rem;">
+                <div class="section-title">
+                    <h2>Частые вопросы</h2>
+                    <p>Ответы на популярные вопросы о наших курсах и услугах</p>
+                </div>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Как записаться на курс?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Выберите подходящий курс в каталоге, нажмите "Записаться" и заполните форму регистрации. После этого наш менеджер свяжется с вами для подтверждения записи и ответит на все вопросы.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Можно ли получить пробный урок?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Да, мы предоставляем бесплатный пробный урок для всех новых студентов. Запишитесь на демо-урок через форму на главной странице, и мы подберем удобное время для занятия.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Какие нужны документы для записи?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Для записи на курс достаточно заполнить онлайн-заявку. Договор и другие документы мы подготовим электронно. При необходимости предоставим все документы для налогового вычета.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Есть ли рассрочка платежа?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Да, мы предоставляем беспроцентную рассрочку на большинство курсов. Вы можете разделить оплату на 2-4 части. Подробности уточняйте у наших менеджеров.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EnglishMaster</h3>
+                    <p>Платформа для структурированной подготовки к ЕГЭ по английскому языку.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Разделы</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог курсов</a></li>
+                        <li><a href="materials.html">Учебные материалы</a></li>
+                        <li><a href="practice.html">Практика</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Курсы</h3>
+                    <ul class="footer-links">
+                        <li><a href="course-intensive.html">Интенсивный курс</a></li>
+                        <li><a href="course-writing.html">Эссе и письмо</a></li>
+                        <li><a href="course-listening.html">Аудирование</a></li>
+                        <li><a href="course-speaking.html">Говорение</a></li>
+                        <li><a href="course-grammar.html">Грамматика</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> info@englishmaster.ru</li>
+                        <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Образцова, 25</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 EnglishMaster. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('main-nav').classList.toggle('active');
+        });
+        
+        // FAQ accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Contact form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
