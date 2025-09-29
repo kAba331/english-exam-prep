@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Грамматика - EnglishMaster</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ВСТАВЬТЕ СТИЛИ ИЗ course-intensive.html */
+        
+        .grammar-topics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .topic-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--primary);
+        }
+        
+        .difficulty {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .difficulty-easy {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .difficulty-medium {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .difficulty-hard {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .interactive-exercise {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin: 2rem 0;
+        }
+        
+        .exercise-feedback {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .feedback-correct {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .feedback-incorrect {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>EnglishMaster</span>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог курсов</a></li>
+                        <li><a href="materials.html">Учебные материалы</a></li>
+                        <li><a href="practice.html">Практика</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Войти</a>
+                    <a href="register.html" class="btn btn-primary">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Course Hero -->
+    <section class="course-hero">
+        <div class="container">
+            <div class="breadcrumb" style="margin-bottom: 2rem;">
+                <a href="index.html" style="color: var(--accent);">Главная</a> / 
+                <a href="catalog.html" style="color: var(--accent);">Каталог</a> / 
+                <span style="color: white;">Грамматика</span>
+            </div>
+            
+            <div class="course-header">
+                <div>
+                    <h1 style="font-size: 3rem; margin-bottom: 1rem;">Курс грамматики для ЕГЭ</h1>
+                    <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem;">
+                        Систематизируйте знания английской грамматики и научитесь безошибочно выполнять задания. 
+                        От времен глаголов до сложных синтаксических конструкций.
+                    </p>
+                    
+                    <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="far fa-clock"></i>
+                            <span>30 академических часов</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-signal"></i>
+                            <span>Все уровни</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-users"></i>
+                            <span>До 18 человек в группе</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="far fa-calendar"></i>
+                            <span>Старт 10 января</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-sidebar">
+                    <div class="course-price">5 900 ₽</div>
+                    <div style="color: #6c757d; margin-bottom: 1rem;">или 2 950 ₽/мес</div>
+                    
+                    <a href="register.html?course=grammar" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">
+                        Записаться на курс
+                    </a>
+                    <a href="demo.html" class="btn btn-outline" style="width: 100%; color: var(--dark); border-color: #ddd;">
+                        Бесплатный пробный урок
+                    </a>
+                    
+                    <ul class="course-features">
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Все правила грамматики</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>300+ упражнений</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Интерактивные тесты</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Таблицы и схемы</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Сертификат о завершении</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Content -->
+    <section class="features" style="padding: 5rem 0;">
+        <div class="container">
+            <div class="course-header">
+                <!-- Main Content -->
+                <div>
+                    <!-- Interactive Exercise -->
+                    <div class="interactive-exercise">
+                        <h3 style="color: var(--secondary); margin-bottom: 1rem;">Попробуйте демо-упражнение</h3>
+                        <p style="color: #6c757d; margin-bottom: 1.5rem;">
+                            Выберите правильный вариант и проверьте свои знания
+                        </p>
+                        
+                        <div style="margin-bottom: 1.5rem;">
+                            <p><strong>1. By next year, I ______ English for five years.</strong></p>
+                            <div style="margin: 0.5rem 0;">
+                                <input type="radio" id="ex1a" name="exercise1" value="a">
+                                <label for="ex1a" style="margin-left: 0.5rem;">will study</label>
+                            </div>
+                            <div style="margin: 0.5rem 0;">
+                                <input type="radio" id="ex1b" name="exercise1" value="b">
+                                <label for="ex1b" style="margin-left: 0.5rem;">will have been studying</label>
+                            </div>
+                            <div style="margin: 0.5rem 0;">
+                                <input type="radio" id="ex1c" name="exercise1" value="c">
+                                <label for="ex1c" style="margin-left: 0.5rem;">will have studied</label>
+                            </div>
+                        </div>
+                        
+                        <button id="checkAnswer" class="btn btn-primary">Проверить ответ</button>
+                        
+                        <div class="exercise-feedback" id="exerciseFeedback">
+                            <!-- Feedback will appear here -->
+                        </div>
+                    </div>
+
+                    <!-- About Course -->
+                    <div style="margin-bottom: 3rem;">
+                        <h2 style="color: var(--secondary); margin-bottom: 1.5rem;">О курсе</h2>
+                        <p style="margin-bottom: 1rem;">
+                            Грамматика - фундамент английского языка. На этом курсе мы систематизируем все правила 
+                            от базовых до продвинутых и научимся применять их в контексте ЕГЭ.
+                        </p>
+                        <p style="margin-bottom: 1rem;">
+                            Каждая тема сопровождается понятными объяснениями, таблицами, схемами и большим 
+                            количеством практических упражнений с постепенным увеличением сложности.
+                        </p>
+                    </div>
+
+                    <!-- Grammar Topics -->
+                    <div style="margin-bottom: 3rem;">
+                        <h2 style="color: var(--secondary); margin-bottom: 1.5rem;">Основные темы курса</h2>
+                        <div class="grammar-topics">
+                            <div class="topic-card">
+                                <span class="difficulty difficulty-medium">Средняя сложность</span>
+                                <h4>Времена глаголов</h4>
+                                <p style="color: #6c757d; margin: 0.5rem 0;">
+                                    Все 12 времен активного залога + пассивный залог
+                                </p>
+                                <div style="font-size: 0.9rem;">
+                                    <span style="color: var(--primary);">✓ 15 упражнений</span> • 
+                                    <span style="color: var(--primary);">✓ 3 теста</span>
+                                </div>
+                            </div>
+                            
+                            <div class="topic-card">
+                                <span class="difficulty difficulty-hard">Высокая сложность</span>
+                                <h4>Условные предложения</h4>
+                                <p style="color: #6c757d; margin: 0.5rem 0;">
+                                    Все типы условных предложений + смешанные типы
+                                </p>
+                                <div style="font-size: 0.9rem;">
+                                    <span style="color: var(--primary);">✓ 12 упражнений</span> • 
+                                    <span style="color: var(--primary);">✓ 2 теста</span>
+                                </div>
+                            </div>
+                            
+                            <div class="topic-card">
+                                <span class="difficulty difficulty-easy">Легкая сложность</span>
+                                <h4>Артикли</h4>
+                                <p style="color: #6c757d; margin: 0.5rem 0;">
+                                    Определенный, неопределенный и нулевой артикли
+                                </p>
+                                <div style="font-size: 0.9rem;">
+                                    <span style="color: var(--primary);">✓ 8 упражнений</span> • 
+                                    <span style="color: var(--primary);">✓ 1 тест</span>
+                                </div>
+                            </div>
+                            
+                            <div class="topic-card">
+                                <span class="difficulty difficulty-medium">Средняя сложность</span>
+                                <h4>Модальные глаголы</h4>
+                                <p style="color: #6c757d; margin: 0.5rem 0;">
+                                    Can, could, may, might, must, should, would
+                                </p>
+                                <div style="font-size: 0.9rem;">
+                                    <span style="color: var(--primary);">✓ 10 упражнений</span> • 
+                                    <span style="color: var(--primary);">✓ 2 теста</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Syllabus -->
+                    <div class="syllabus">
+                        <h2 style="color: var(--secondary); margin-bottom: 1.5rem;">Программа курса</h2>
+                        
+                        <div class="module active">
+                            <div class="module-header">
+                                <h3>Модуль 1: Основы грамматики (2 недели)</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="module-content">
+                                <div class="lesson-item">
+                                    <i class="far fa-play-circle" style="color: var(--primary);"></i>
+                                    <div>
+                                        <div>Времена Present и Past</div>
+                                        <div class="lesson-duration">4 занятия • 8 часов</div>
+                                    </div>
+                                </div>
+                                <div class="lesson-item">
+                                    <i class="far fa-play-circle" style="color: var(--primary);"></i>
+                                    <div>
+                                        <div>Артикли и предлоги</div>
+                                        <div class="lesson-duration">3 занятия • 6 часов</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="module">
+                            <div class="module-header">
+                                <h3>Модуль 2: Сложная грамматика (3 недели)</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="module-content">
+                                <!-- Content would be here -->
+                            </div>
+                        </div>
+                        
+                        <!-- More modules... -->
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="course-sidebar">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Что вы получите:</h3>
+                    <ul class="course-features">
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Системные знания грамматики</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Умение видеть грамматические ошибки</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Навык применения правил в речи</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Уверенность в разделе "Грамматика"</span>
+                        </li>
+                    </ul>
+                    
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                        <h4 style="margin-bottom: 1rem;">📈 Результаты студентов:</h4>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2rem; font-weight: bold; color: var(--primary);">92%</div>
+                            <div style="color: #6c757d;">правильных ответов в тестах</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <!-- ВСТАВЬТЕ FOOTER ИЗ course-intensive.html -->
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('main-nav').classList.toggle('active');
+        });
+        
+        // Module accordion
+        const modules = document.querySelectorAll('.module');
+        modules.forEach(module => {
+            const header = module.querySelector('.module-header');
+            header.addEventListener('click', () => {
+                modules.forEach(m => {
+                    if (m !== module) {
+                        m.classList.remove('active');
+                    }
+                });
+                module.classList.toggle('active');
+            });
+        });
+        
+        // Grammar exercise
+        document.getElementById('checkAnswer').addEventListener('click', function() {
+            const selected = document.querySelector('input[name="exercise1"]:checked');
+            const feedback = document.getElementById('exerciseFeedback');
+            
+            if (!selected) {
+                feedback.textContent = 'Пожалуйста, выберите вариант ответа';
+                feedback.className = 'exercise-feedback feedback-incorrect';
+                feedback.style.display = 'block';
+                return;
+            }
+            
+            if (selected.value === 'b') {
+                feedback.innerHTML = '✅ Правильно!<br><strong>Future Perfect Continuous</strong> используется для действий, которые будут продолжаться в течение определенного периода времени к конкретному моменту в будущем.';
+                feedback.className = 'exercise-feedback feedback-correct';
+            } else {
+                feedback.innerHTML = '❌ Неправильно. Правильный ответ: <strong>will have been studying</strong><br><br>Future Perfect Continuous используется для действий, которые будут продолжаться в течение определенного периода времени к конкретному моменту в будущем.';
+                feedback.className = 'exercise-feedback feedback-incorrect';
+            }
+            
+            feedback.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
