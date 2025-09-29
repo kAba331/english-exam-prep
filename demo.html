@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бесплатный демо-урок - EnglishMaster</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ВСТАВЬТЕ СТИЛИ ИЗ index.html */
+        
+        .demo-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .demo-card {
+            background: white;
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .demo-icon {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+        
+        .demo-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .demo-feature {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin: 0 auto 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Simple Header -->
+    <header style="background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" style="color: var(--dark);">
+                    <i class="fas fa-graduation-cap" style="color: var(--primary);"></i>
+                    <span>EnglishMaster</span>
+                </div>
+                <div>
+                    <a href="index.html" class="btn btn-outline" style="color: var(--dark); border-color: var(--dark);">
+                        На главную
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Demo Content -->
+    <section style="padding: 4rem 0; background: linear-gradient(135deg, #f8f9fa, #e9ecef);">
+        <div class="container">
+            <div class="demo-container">
+                <div class="demo-card">
+                    <div class="demo-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    
+                    <h1 style="color: var(--secondary); margin-bottom: 1rem;">Бесплатный демо-урок</h1>
+                    <p style="font-size: 1.2rem; color: #6c757d; margin-bottom: 2rem;">
+                        Попробуйте наш формат обучения бесплатно и убедитесь в эффективности подготовки
+                    </p>
+                    
+                    <div class="demo-features">
+                        <div class="demo-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h4>Живой урок</h4>
+                            <p style="color: #6c757d; font-size: 0.9rem;">60 минут с преподавателем</p>
+                        </div>
+                        
+                        <div class="demo-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h4>Материалы</h4>
+                            <p style="color: #6c757d; font-size: 0.9rem;">PDF и интерактивные задания</p>
+                        </div>
+                        
+                        <div class="demo-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h4>Обратная связь</h4>
+                            <p style="color: #6c757d; font-size: 0.9rem;">Персональные рекомендации</p>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #f8f9fa; padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+                        <h3 style="color: var(--secondary); margin-bottom: 1rem;">Тема демо-урока:</h3>
+                        <h4 style="color: var(--primary); margin-bottom: 1rem;">"Эффективные стратегии выполнения заданий ЕГЭ"</h4>
+                        <p style="color: #6c757d;">
+                            На уроке мы разберем: техники работы с аудированием, структуру эссе на высокий балл, 
+                            лайфхаки для раздела "Грамматика" и получим практические советы по подготовке.
+                        </p>
+                    </div>
+                    
+                    <form id="demoForm" style="text-align: left;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                            <div class="form-group">
+                                <label for="demoName">Имя *</label>
+                                <input type="text" id="demoName" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="demoPhone">Телефон *</label>
+                                <input type="tel" id="demoPhone" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="demoEmail">Email *</label>
+                            <input type="email" id="demoEmail" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="demoTime">Удобное время для звонка</label>
+                            <select id="demoTime" class="form-control">
+                                <option value="">Выберите время</option>
+                                <option value="morning">Утро (9:00-12:00)</option>
+                                <option value="day">День (12:00-18:00)</option>
+                                <option value="evening">Вечер (18:00-21:00)</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem; font-size: 1.1rem;">
+                            Записаться на бесплатный урок
+                        </button>
+                    </form>
+                    
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #eee;">
+                        <p style="color: #6c757d; font-size: 0.9rem;">
+                            ✅ После отправки формы наш менеджер свяжется с вами в течение 2 часов для подтверждения времени урока
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EnglishMaster</h3>
+                    <p>Платформа для структурированной подготовки к ЕГЭ по английскому языку.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> info@englishmaster.ru</li>
+                        <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Образцова, 25</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 EnglishMaster. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Demo form
+        document.getElementById('demoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('demoName').value;
+            const phone = document.getElementById('demoPhone').value;
+            const email = document.getElementById('demoEmail').value;
+            
+            // Здесь будет отправка формы на сервер
+            console.log('Demo registration:', { name, phone, email });
+            
+            // Временное сообщение об успехе
+            alert(`Спасибо, ${name}! Мы получили вашу заявку. Наш менеджер свяжется с вами в течение 2 часов для подтверждения времени демо-урока.`);
+            
+            // Очистка формы
+            this.reset();
+            
+            // Перенаправление на главную
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
