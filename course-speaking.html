@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Говорение - EnglishMaster</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ВСТАВЬТЕ СТИЛИ ИЗ course-intensive.html */
+        
+        .speaking-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 auto 1rem;
+        }
+        
+        .practice-session {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin: 2rem 0;
+        }
+        
+        .recorder {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .record-btn {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--danger);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .record-btn.recording {
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>EnglishMaster</span>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог курсов</a></li>
+                        <li><a href="materials.html">Учебные материалы</a></li>
+                        <li><a href="practice.html">Практика</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Войти</a>
+                    <a href="register.html" class="btn btn-primary">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Course Hero -->
+    <section class="course-hero">
+        <div class="container">
+            <div class="breadcrumb" style="margin-bottom: 2rem;">
+                <a href="index.html" style="color: var(--accent);">Главная</a> / 
+                <a href="catalog.html" style="color: var(--accent);">Каталог</a> / 
+                <span style="color: white;">Говорение</span>
+            </div>
+            
+            <div class="course-header">
+                <div>
+                    <h1 style="font-size: 3rem; margin-bottom: 1rem;">Курс говорения для ЕГЭ</h1>
+                    <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem;">
+                        Преодолейте языковой барьер и научитесь уверенно говорить на английском. 
+                        Подготовьтесь к устной части ЕГЭ с системой распознавания речи и обратной связью.
+                    </p>
+                    
+                    <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="far fa-clock"></i>
+                            <span>20 академических часов</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-signal"></i>
+                            <span>Средний уровень</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-users"></i>
+                            <span>До 10 человек в группе</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="far fa-calendar"></i>
+                            <span>Старт 25 января</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-sidebar">
+                    <div class="course-price">4 500 ₽</div>
+                    <div style="color: #6c757d; margin-bottom: 1rem;">или 2 250 ₽/мес</div>
+                    
+                    <a href="register.html?course=speaking" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">
+                        Записаться на курс
+                    </a>
+                    <a href="demo.html" class="btn btn-outline" style="width: 100%; color: var(--dark); border-color: #ddd;">
+                        Бесплатный пробный урок
+                    </a>
+                    
+                    <ul class="course-features">
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Индивидуальная практика</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Распознавание речи</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Коррекция произношения</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Темы для монологов</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Сертификат о завершении</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Content -->
+    <section class="features" style="padding: 5rem 0;">
+        <div class="container">
+            <div class="course-header">
+                <!-- Main Content -->
+                <div>
+                    <!-- Speaking Practice Demo -->
+                    <div class="practice-session">
+                        <h3 style="color: var(--secondary); margin-bottom: 1rem;">Попробуйте демо-задание</h3>
+                        <p style="color: #6c757d; margin-bottom: 1rem;">
+                            Запишите свой ответ на тему и получите анализ произношения
+                        </p>
+                        
+                        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                            <h4 style="margin-bottom: 0.5rem;">Тема для монолога:</h4>
+                            <p><strong>"Describe your favorite season and explain why you like it"</strong></p>
+                            <p style="color: #6c757d; font-size: 0.9rem; margin-top: 0.5rem;">
+                                Подготовка: 1.5 минуты • Ответ: 2 минуты
+                            </p>
+                        </div>
+                        
+                        <div class="recorder">
+                            <button class="record-btn" id="recordBtn">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                            <div id="timer" style="font-size: 1.2rem; margin-bottom: 1rem;">0:00</div>
+                            <div id="recordingStatus">Нажмите кнопку для начала записи</div>
+                        </div>
+                    </div>
+
+                    <!-- About Course -->
+                    <div style="margin-bottom: 3rem;">
+                        <h2 style="color: var(--secondary); margin-bottom: 1.5rem;">О курсе</h2>
+                        <p style="margin-bottom: 1rem;">
+                            Устная часть ЕГЭ требует не только знания языка, но и уверенности в себе. 
+                            На этом курсе вы преодолеете страх говорить на английском и научитесь строить грамотные монологи.
+                        </p>
+                        <p style="margin-bottom: 1rem;">
+                            Мы используем современные технологии распознавания речи для анализа вашего произношения 
+                            и предоставляем детальную обратную связь по каждому аспекту устной речи.
+                        </p>
+                    </div>
+
+                    <!-- Speaking Features -->
+                    <div style="margin-bottom: 3rem;">
+                        <h2 style="color: var(--secondary); margin-bottom: 1.5rem;">Что мы развиваем</h2>
+                        <div class="speaking-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-volume-up"></i>
+                                </div>
+                                <h4>Произношение</h4>
+                                <p style="color: #6c757d;">Коррекция звуков и интонации</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <h4>Fluency</h4>
+                                <p style="color: #6c757d;">Плавность и скорость речи</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-puzzle-piece"></i>
+                                </div>
+                                <h4>Структура</h4>
+                                <p style="color: #6c757d;">Логичное построение монолога</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <h4>Лексика</h4>
+                                <p style="color: #6c757d;">Богатый словарный запас</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Syllabus -->
+                    <div class="syllabus">
+                        <h2 style="color: var(--secondary); margin-bottom: 1.5rem;">Программа курса</h2>
+                        
+                        <div class="module active">
+                            <div class="module-header">
+                                <h3>Модуль 1: Основы устной речи (1 неделя)</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="module-content">
+                                <div class="lesson-item">
+                                    <i class="far fa-play-circle" style="color: var(--primary);"></i>
+                                    <div>
+                                        <div>Произношение и интонация</div>
+                                        <div class="lesson-duration">2 занятия • 4 часа</div>
+                                    </div>
+                                </div>
+                                <div class="lesson-item">
+                                    <i class="far fa-play-circle" style="color: var(--primary);"></i>
+                                    <div>
+                                        <div>Структура монолога</div>
+                                        <div class="lesson-duration">1 занятие • 2 часа</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="module">
+                            <div class="module-header">
+                                <h3>Модуль 2: Тематические монологи (2 недели)</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="module-content">
+                                <!-- Content would be here -->
+                            </div>
+                        </div>
+                        
+                        <!-- More modules... -->
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="course-sidebar">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Результаты после курса:</h3>
+                    <ul class="course-features">
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Уверенность в устной речи</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Правильное произношение</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Навык построения монолога</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check" style="color: var(--success);"></i>
+                            <span>Умение укладываться в время</span>
+                        </li>
+                    </ul>
+                    
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                        <h4 style="margin-bottom: 1rem;">🎯 Средний балл:</h4>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2rem; font-weight: bold; color: var(--primary);">18.5/20</div>
+                            <div style="color: #6c757d;">за устную часть ЕГЭ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <!-- ВСТАВЬТЕ FOOTER ИЗ course-intensive.html -->
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('main-nav').classList.toggle('active');
+        });
+        
+        // Module accordion
+        const modules = document.querySelectorAll('.module');
+        modules.forEach(module => {
+            const header = module.querySelector('.module-header');
+            header.addEventListener('click', () => {
+                modules.forEach(m => {
+                    if (m !== module) {
+                        m.classList.remove('active');
+                    }
+                });
+                module.classList.toggle('active');
+            });
+        });
+        
+        // Recording simulation
+        const recordBtn = document.getElementById('recordBtn');
+        const timer = document.getElementById('timer');
+        const status = document.getElementById('recordingStatus');
+        let isRecording = false;
+        let seconds = 0;
+        
+        recordBtn.addEventListener('click', function() {
+            isRecording = !isRecording;
+            
+            if (isRecording) {
+                this.classList.add('recording');
+                status.textContent = 'Идет запись... Говорите сейчас!';
+                startTimer();
+            } else {
+                this.classList.remove('recording');
+                status.textContent = 'Запись завершена. Анализируем произношение...';
+                setTimeout(() => {
+                    status.innerHTML = '✅ Анализ завершен!<br>Ваше произношение: 85% • Fluency: 90%';
+                }, 2000);
+                resetTimer();
+            }
+        });
+        
+        function startTimer() {
+            seconds = 0;
+            const interval = setInterval(() => {
+                if (!isRecording) {
+                    clearInterval(interval);
+                    return;
+                }
+                seconds++;
+                const minutes = Math.floor(seconds / 60);
+                const secs = seconds % 60;
+                timer.textContent = `${minutes}:${secs.toString().padStart(2, '0')}`;
+                
+                if (seconds >= 120) { // 2 minutes
+                    isRecording = false;
+                    recordBtn.classList.remove('recording');
+                    status.textContent = 'Время вышло! Анализируем запись...';
+                    clearInterval(interval);
+                }
+            }, 1000);
+        }
+        
+        function resetTimer() {
+            seconds = 0;
+            timer.textContent = '0:00';
+        }
+    </script>
+</body>
+</html>
